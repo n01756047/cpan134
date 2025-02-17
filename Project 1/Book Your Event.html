@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Event</title>
+</head>
+<body>
+    <section>
+        <h2>Book Your Event with Us</h2>
+        <p>Fill out the form below to book your special event. We will get in touch with you to discuss the details and make it extraordinary!</p>
+
+        <form action="submit_event.php" method="POST">
+            <label for="name">Your Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Your Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="event_type">Event Type:</label><br>
+            <select id="event_type" name="event_type" required>
+                <option value="wedding">Wedding</option>
+                <option value="birthday">Birthday</option>
+                <option value="other">Other Celebration</option>
+            </select><br><br>
+
+            <label for="event_date">Preferred Event Date:</label><br>
+            <input type="date" id="event_date" name="event_date" required><br><br>
+
+            <label for="message">Additional Details or Requests:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+            <input type="submit" value="Submit Booking">
+        </form>
+
+    </section>
+</body>
+</html>
+
+
+    <section>
+        <h2>Get in Touch</h2>
+        <form action="" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message"></textarea><br><br>
+            
+            <input type="submit" value="Send">
+        </form>
+    </section>
+
+    <footer>
+        <p>Copyright © 2025 My Web Project</p>
+    </footer>
+</body>
+</html>
