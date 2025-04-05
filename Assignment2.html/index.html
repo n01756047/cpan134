@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🧠 Assignment2.web Programing</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+    body {
+      background: linear-gradient(135deg, #f7f7f7, #dfe4ea);
+      color: #333;
+      font-family: 'Roboto', sans-serif;
+      padding: 40px;
+      margin: 0;
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      color: #333;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      color: #2d3436;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    #clickButton {
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #clickButton:hover {
+      background-color: #45a049;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: #ecf0f1;
+      color: #2d3436;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      cursor: pointer;
+    }
+
+    li:hover {
+      background-color: #bdc3c7;
+      color: #34495e;
+    }
+
+    #boxModelDiv {
+      width: 220px;
+      height: 220px;
+      margin: 20px auto;
+      background-color: #f1f2f6;
+      color: #2d3436;
+      padding: 20px;
+      border: 4px solid #b2bec3;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    #boxModelDiv:hover {
+      transform: scale(1.05);
+      border-color: #7f8c8d;
+    }
+
+    .link-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .link-button:hover {
+      background-color: #2980b9;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>✨ ASSIGNMENT 2</h1>
+
+  <div class="section">
+    <h2>🧮 Part 1: Area Calculator</h2>
+    <p>Open your browser console and type: <code>calculateArea(5, 3)</code></p>
+  </div>
+
+  <div class="section">
+    <h2>🖱️ Part 2: Button Click</h2>
+    <button id="clickButton">Click Me!</button>
+  </div>
+
+  <div class="section">
+    <h2>🧾 Part 3: Interactive List</h2>
+    <ul id="itemList">
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🎨 Part 4: Box Model</h2>
+    <div id="boxModelDiv">Hover & Click Me!</div>
+  </div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
