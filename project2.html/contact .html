@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | CodeNova</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #16222a, #3a6073);
+      color: #fff;
+    }
+    header, footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #00000088;
+      padding: 1rem;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #00ffff;
+    }
+    .form-container {
+      max-width: 600px;
+      margin: 3rem auto;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000000aa;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+      color: #000;
+    }
+    input:focus, textarea:focus {
+      outline: 2px solid #00ffff;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #00bcd4;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #008c9e;
+    }
+  </style>
+  <script>
+    function validateForm() {
+      const name = document.forms["contactForm"]["name"].value;
+      const email = document.forms["contactForm"]["email"].value;
+      const message = document.forms["contactForm"]["message"].value;
+      if (name === "" || email === "" || message === "") {
+        alert("Please fill out all fields before submitting.");
+        return false;
+      }
+      alert("Message sent successfully!");
+      return true;
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>Contact Me</h1>
+    <p>Let’s connect — I'd love to hear from you!</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="contact.html">Contact</a>
+    <a href="projects.html">Projects</a>
+    <a href="project_description.html">Project Description</a>
+    <a href="media.html">Media</a>
+  </nav>
+
+  <div class="form-container">
+    <form name="contactForm" onsubmit="return validateForm()">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="name..." />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder=" abc@gmail.com.." />
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Aryan | CodeNova
+  </footer>
+
+</body>
+</html>

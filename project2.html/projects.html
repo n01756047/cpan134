@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | CodeNova </title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #16222a, #3a6073);
+      color: #fff;
+    }
+    header, footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #00000088;
+      padding: 1rem;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #00ffff;
+    }
+    .project-section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .filter-btns {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .filter-btns button {
+      padding: 0.5rem 1rem;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      background-color: #00bcd4;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .filter-btns button:hover {
+      background-color: #008c9e;
+    }
+    .project-card {
+      background-color: rgba(255,255,255,0.05);
+      border: 1px solid #fff2;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 10px #0005;
+    }
+    .project-card h3 {
+      margin: 0;
+    }
+    .description {
+      display: none;
+      margin-top: 1rem;
+      line-height: 1.5;
+    }
+    .toggle-btn {
+      background-color: transparent;
+      border: 1px solid #00ffff;
+      color: #00ffff;
+      padding: 5px 10px;
+      margin-top: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .stars {
+      margin-top: 1rem;
+    }
+    .stars span {
+      font-size: 1.5rem;
+      color: #ccc;
+      cursor: pointer;
+    }
+    .stars span:hover,
+    .stars span.rated {
+      color: gold;
+    }
+    a.github-link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #00ffff;
+      text-decoration: none;
+    }
+    a.github-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Projects</h1>
+    <p>Explore the assignments and projects I've built as part of my journey!</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="contact .html">Contact</a>
+    <a href="projects.html">Projects</a>
+    <a href="project_description.html">Project Description</a>
+    <a href="media.html">Media</a>
+  </nav>
+
+  <section class="project-section">
+    <div class="filter-btns">
+      <button onclick="filterProjects('all')">All</button>
+      <button onclick="filterProjects('html')">HTML Assignments</button>
+      <button onclick="filterProjects('js')">JavaScript Assignments</button>
+      <button onclick="filterProjects('full')">Full Projects</button>
+    </div>
+
+    <div class="project-card html">
+      <h3>Assignment 1: HTML Resume</h3>
+      <button class="toggle-btn" onclick="toggleDescription(this)">Show Description</button>
+      <div class="description">
+        <p>This project demonstrates HTML structure with semantic elements, forms, and styling using HTML only.</p>
+        <a class="github-link" href="https://github.com/n01756047/cpan134/tree/850fcb967a91e71ad5bfc16628b81598dd1367a4/Assignment%201" target="_blank">View on GitHub</a>
+      </div>
+      <div class="stars" data-id="html1">
+        <span onclick="rate(this)">★</span><span onclick="rate(this)">★</span><span onclick="rate(this)">★</span><span onclick="rate(this)">★</span><span onclick="rate(this)">★</span>
+      </div>
+    </div>
+
+    <div class="project-card js">
+      <h3>Assignment 2: JavaScript Interaction</h3>
+      <button class="toggle-btn" onclick="toggleDescription(this)">Show Description</button>
+      <div class="description">
+        <p>This assignment involves JavaScript basics like form validation, DOM manipulation, and styling events.</p>
+        <a class="github-link" href="https://github.com/n01756047/cpan134/tree/850fcb967a91e71ad5bfc16628b81598dd1367a4/Assignment2.html" target="_blank">View on GitHub</a>
+      </div>
+      <div class="stars" data-id="js1">
+        <span onclick="rate(this)">★</span><span onclick="rate(this)">★</span><span onclick="rate(this)">★</span><span onclick="rate(this)">★</span><span onclick="rate(this)">★</span>
+      </div>
+    </div>
+
+    <div class="project-card full">
+      <h3>Project 1: Personal Portfolio Website</h3>
+      <button class="toggle-btn" onclick="toggleDescription(this)">Show Description</button>
+      <div class="description">
+        <p>This project showcases a fully designed website using HTML, CSS, JavaScript — including form validation and interactive UI.</p>
+        <a class="github-link" href="https://github.com/n01756047/cpan134/tree/850fcb967a91e71ad5bfc16628b81598dd1367a4/Project%201" target="_blank">View on GitHub</a>
+      </div>
+      <div class="stars" data-id="full1">
+        <span onclick="rate(this)">★</span><span onclick="rate(this)">★</span><span onclick="rate(this)">★</span><span onclick="rate(this)">★</span><span onclick="rate(this)">★</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Aryan Sura | CodeCraft
+  </footer>
+
+  <script>
+    function toggleDescription(btn) {
+      const desc = btn.nextElementSibling;
+      const isVisible = desc.style.display === "block";
+      desc.style.display = isVisible ? "none" : "block";
+      btn.textContent = isVisible ? "Show Description" : "Hide Description";
+    }
+
+    function filterProjects(type) {
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        if (type === 'all' || card.classList.contains(type)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function rate(star) {
+      const allStars = star.parentElement.querySelectorAll('span');
+      allStars.forEach(s => s.classList.remove('rated'));
+      let index = Array.from(allStars).indexOf(star);
+      for (let i = 0; i <= index; i++) {
+        allStars[i].classList.add('rated');
+      }
+      const projectId = star.parentElement.getAttribute('data-id');
+      console.log(`Rated ${index + 1} stars for project ${projectId}`);
+    }
+  </script>
+
+</body>
+</html>

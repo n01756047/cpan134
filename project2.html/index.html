@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CodeNova | Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #1f1c2c, #928dab);
+      color: #fff;
+    }
+    header {
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #00000088;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(0,0,0,0.6);
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to CodeNova</h1>
+    <p id="greeting">Crafting My Code Journey...</p>
+  </header>
+  
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="contact .html">Contact</a>
+    <a href="projects.html">Projects</a>
+    <a href="project_description.html">project Description</a>
+    <a href="media.html">Media</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Hello, I'm Aryan </h1>
+    <p>Aspiring Web Developer | Building cool things with HTML, CSS, and JavaScript</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Aryan | CodeNova
+  </footer>
+
+  <script>
+    const now = new Date();
+    const hours = now.getHours();
+    const greeting = document.getElementById("greeting");
+
+    if (hours < 12) {
+      greeting.textContent = "Good morning! Let's craft some code.";
+    } else if (hours < 18) {
+      greeting.textContent = "Good afternoon! Welcome to my coding journey.";
+    } else {
+      greeting.textContent = "Good evening! Explore my portfolio below.";
+    }
+  </script>
+</body>
+</html>
